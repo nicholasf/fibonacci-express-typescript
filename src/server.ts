@@ -15,6 +15,7 @@ service.use(bodyParser.urlencoded({ extended: true }));
  */
 // app.get("/", homeController.index);
 
+import { fibonacci } from "./lib/fibonacci";
 
 /**
  * Start Express server.
@@ -27,6 +28,8 @@ service.use(bodyParser.urlencoded({ extended: true }));
         service.get("env")
     );
     console.log("  Press CTRL-C to stop\n");
+
+    console.log(fibonacci(10));
 });
 
 export default server;
