@@ -1,6 +1,9 @@
-.PHONY: clean
+.PHONY: clean test run build
 
-default:
+default: clean build
+	node ./dist/server.js
+
+build:
 	npx tsc -p .
 
 clean: 
@@ -8,5 +11,8 @@ clean:
 
 run:
 	node ./dist/server.js
+
+test:
+	npx mocha -r ts-node/register test/**/*.ts
 
 
