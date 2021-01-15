@@ -1,6 +1,3 @@
-// declare module "Fibonacci" {
-    export interface Fn {
-        (index: number): number;
-    }    
-// }
-
+export default interface Fn {
+    (index: number): number;
+}    

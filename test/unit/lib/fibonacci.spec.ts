@@ -1,4 +1,4 @@
-import { fibonacci } from "../../src/lib/fibonacci";
+import fibonacci from "../../../src/lib/fibonacci";
 import { expect } from "chai";
 
 type FibNumber = [number, number];
