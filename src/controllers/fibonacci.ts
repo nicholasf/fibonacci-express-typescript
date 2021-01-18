@@ -15,7 +15,11 @@ const controller = (req: Request, res: Response, next: NextFunction) => {
         res.json(fibResponse);
     } else {
         res.type('application/json');
-        next({ status: 400, statusMessage: 'Please submit a number signifying a postition in the Fibonacci sequence.' }); 
+        next({ 
+            status: 400, 
+            message: 'Please submit a number signifying a postition in the Fibonacci sequence.',
+            name: "BadR equest"
+        }); 
     }
 }
 
