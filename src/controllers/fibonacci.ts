@@ -15,6 +15,8 @@ const controller = (req: Request, res: Response, next: NextFunction) => {
         res.json(fibResponse);
     } else {
         res.type('application/json');
+
+        // rely on the default error handler in Express. See https://expressjs.com/en/guide/error-handling.html
         next({ 
             status: 400, 
             message: 'Please submit a number signifying a postition in the Fibonacci sequence.',
