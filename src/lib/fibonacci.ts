@@ -1,6 +1,6 @@
-import { Fn } from "Fibonacci";
+import FibFn from "Fibonacci";
 
-const fibonacci: Fn = (n: number) => { 
+const fibonacci: FibFn = (n: number) => { 
     if (n < 2) {
         return n;
     }
@@ -8,4 +8,4 @@ const fibonacci: Fn = (n: number) => {
     return fibonacci(n -1) + fibonacci(n - 2);
 }
 
-export { fibonacci };
+export default fibonacci;

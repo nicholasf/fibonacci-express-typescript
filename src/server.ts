@@ -1,21 +1,16 @@
 import express from "express";
-import bodyParser from "body-parser";
+import fibController from "./controllers/fibonacci";
 
 // Create Express server
 const service = express();
 
 // Express configuration
 service.set("port", 3000);
-service.use(bodyParser.json());
-service.use(bodyParser.urlencoded({ extended: true }));
-
 
 /**
- * Primary app routes.
+ * Primary routes.
  */
-// app.get("/", homeController.index);
-
-import { fibonacci } from "./lib/fibonacci";
+service.get("/:index", fibController, );
 
 /**
  * Start Express server.
@@ -28,8 +23,6 @@ import { fibonacci } from "./lib/fibonacci";
         service.get("env")
     );
     console.log("  Press CTRL-C to stop\n");
-
-    console.log(fibonacci(10));
 });
 
 export default server;
