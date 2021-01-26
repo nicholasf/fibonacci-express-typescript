@@ -1,6 +1,6 @@
-This is an implementation of a solution to a coding exercise I used to ask others to complete in a previous role.
+This a mini project so I can just revise using Typescript with Node, along with a configuration I can polish.
 
-It's a nice mini project so I can just revise using Typescript with Node, along with a configuration I can polish.
+.....
 
 ## Install
 
