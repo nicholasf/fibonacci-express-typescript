@@ -1,5 +1,7 @@
 import express from "express";
-import fibController from "./controllers/fibonacci";
+import number from "./controllers/number";
+import resource from "./controllers/resource";
+import error from "./controllers/error"
 
 // Create Express server
 const service = express();
@@ -10,7 +12,7 @@ service.set("port", 3000);
 /**
  * Primary routes.
  */
-service.get("/:index", fibController, );
+service.get("/:position", number, resource, error);
 
 /**
  * Start Express server.

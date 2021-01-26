@@ -1,6 +1,9 @@
 
 export interface FibonacciResource {
-    index: number;
-    value: number;
+    readonly position: number;
+    readonly number: number;
 }
 
+export interface HTTPError extends Error {
+    readonly status: number;
+}
