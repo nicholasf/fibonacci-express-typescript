@@ -1,4 +1,3 @@
-
 export interface FibonacciResource {
     readonly position: number;
     readonly number: number;
