@@ -24,4 +24,7 @@ test:
 docker:
 	docker build -t nicholasf/fib-ts-fibonacci .
 	docker run -p 3000:3000 nicholasf/fib-ts-fibonacci
+
+lint:
+	npx eslint 'src/**/*.{js,ts,tsx}' --quiet --fix
 	
