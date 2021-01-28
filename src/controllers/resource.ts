@@ -22,5 +22,3 @@ const controller = (req: Request, res: Response, next: NextFunction) => {
 }
 
 export default controller;
-
-
