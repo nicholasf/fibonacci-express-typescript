@@ -12,6 +12,12 @@ clean:
 run:
 	node ./dist/server.js
 
+unit:
+	npx mocha -r ts-node/register test/unit/**/*.ts
+
+integration:
+	npx mocha -r ts-node/register test/integration/**/*.ts
+
 test:
 	npx mocha -r ts-node/register test/**/*.ts
 
