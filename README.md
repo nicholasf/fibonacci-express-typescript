@@ -27,4 +27,25 @@ make
 {"position":11,"number":89}%
 ```
 
+## Docker
+
+Alternatively, you can just run 
+
+```bash
+make docker
+```
+
+Then issue curl commands against port 3000 locally.
+
+You will have to `docker ps` and run `docker stop` on the corresponding container to shut it down.
+
+E.g.
+
+```bash
+♪  fibonacci-express-typescript git:(dockerise-it) ✗ docker ps
+CONTAINER ID   IMAGE                        COMMAND                  CREATED          STATUS          PORTS                    NAMES
+9356b2146637   nicholasf/fib-ts-fibonacci   "node ./dist/server.…"   23 seconds ago   Up 22 seconds   0.0.0.0:3000->3000/tcp   busy_bartik
+♪  fibonacci-express-typescript git:(dockerise-it) ✗ docker stop busy_bartik
+busy_bartik
+```
 
