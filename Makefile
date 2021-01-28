@@ -21,4 +21,7 @@ integration:
 test:
 	npx mocha -r ts-node/register test/**/*.ts
 
-
+docker:
+	docker build -t nicholasf/fib-ts-fibonacci .
+	docker run -p 3000:3000 nicholasf/fib-ts-fibonacci
+	
